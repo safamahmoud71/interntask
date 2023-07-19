@@ -17,6 +17,7 @@ class HelpScreen extends StatelessWidget {
         builder: (context, state) {
           HelpCubit myCubit = HelpCubit.get(context);
           return Scaffold(
+            resizeToAvoidBottomInset: false,
             body: SafeArea(
               child: Container(
                 height: double.infinity,
@@ -41,7 +42,7 @@ class HelpScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 40,),
+                    const SizedBox(height: 40,),
                     Expanded(
                       child: ListView.builder(
 
@@ -113,14 +114,14 @@ class HelpScreen extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 40),
-                      child: Container(
+                      child: SizedBox(
                         width: 250,
                         height: 50,
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) =>  HomeScreen()),
+                              MaterialPageRoute(builder: (context) =>  const HomeScreen()),
                             );
                           },
                           style: ElevatedButton.styleFrom(

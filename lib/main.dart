@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:interntask/views/help_screen.dart';
 import 'package:interntask/views/home_screen.dart';
 import 'package:interntask/views/login_screen.dart';
+import 'package:interntask/views/splash_screen.dart';
 import 'package:interntask/views/verify_phone.dart';
 
 import 'network/dio.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:   HomeScreen(),
+      home:   SplashScreen(),
     );
   }
 }

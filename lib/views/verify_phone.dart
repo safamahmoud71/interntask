@@ -23,8 +23,8 @@ class VerifyPhone extends StatelessWidget {
 
             width: double.infinity,
             height: double.infinity,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
+            decoration: const BoxDecoration(
+              gradient:  LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.center,
                 colors: [Color(0xff0062BD),Colors.white],
@@ -37,7 +37,7 @@ class VerifyPhone extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Text('Verify Phone', style: TextStyle(
+                  const Text('Verify Phone', style: TextStyle(
                     color: Colors.white,
                     fontSize: 30
                   ),),
@@ -60,16 +60,16 @@ class VerifyPhone extends StatelessWidget {
                       onChanged:((value){}) ,
                     ),
                   ),
-                  SizedBox(height: 50,),
+                  const SizedBox(height: 50,),
                   TextButton(onPressed: (){},
-                      child: Text('Resend Code',
+                      child: const Text('Resend Code',
                       style: TextStyle(color: Color(0xff0062BD),
                       fontSize: 20,
                       fontWeight: FontWeight.w400,
                       fontFamily: 'Inter'),
                       )),
-                 SizedBox(height: 50,),
-                  Container(
+                 const SizedBox(height: 50,),
+                  SizedBox(
                     width: 280,
                     height: 50,
 
@@ -78,9 +78,9 @@ class VerifyPhone extends StatelessWidget {
                         myCubit.verifyPhone(context);
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff0062BD),
+                        backgroundColor: const Color(0xff0062BD),
                       ),
-                      child: Text(
+                      child: const Text(
                         'verify',
                         style: TextStyle(
                           color: Colors.white,

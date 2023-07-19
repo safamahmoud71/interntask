@@ -1,9 +1,7 @@
-import 'package:bloc/bloc.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:interntask/model/helpscreen_model.dart';
-import 'package:meta/meta.dart';
-
 import '../network/dio.dart';
 
 part 'help_state.dart';
@@ -27,10 +25,10 @@ class HelpCubit extends Cubit<HelpState> {
 
 
   void helpData() {
-    DioHelper.getData(url: 'http://magdsoft.ahmedshawky.fun/api/getHelp').then((value) {
+    DioHelper.getData(url: 'https://magdsoft.ahmedshawky.fun/api/getHelp').then((value) {
       final responseJson = value.data as Map<String, dynamic>;
       final helpmodel = HelpModel.fromJson(responseJson);
-      final List<Help> helpItems = helpmodel?.help ?? [];
+      final List<Help> helpItems = helpmodel.help ?? [];
 
       questions.clear();
       answers.clear();

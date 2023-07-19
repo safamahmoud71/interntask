@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interntask/componet/componet.dart';
+
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -13,8 +13,8 @@ class SearchScreen extends StatelessWidget {
       decoration: InputDecoration(
       fillColor: Colors.white,
         hintText: 'Enter Search here...',
-        prefixIcon: Icon(Icons.search, color: Color(0xff979797),),
-        hintStyle: TextStyle(
+        prefixIcon: const Icon(Icons.search, color: Color(0xff979797),),
+        hintStyle: const TextStyle(
           fontSize: 10.0,
           color: Color(0xffB1B1B1),
           fontWeight: FontWeight.w400,
